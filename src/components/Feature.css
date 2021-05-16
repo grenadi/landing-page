@@ -1,0 +1,34 @@
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+#feature {
+    margin-top: 30px;
+}
+
+.grid {
+    display: flex;
+}
+
+#feature .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 20vw;
+    color: darkorange;
+}
+
+@media (max-width: 550px){
+    #feature .icon {
+        display: none;
+    }
+}
+
+@media (max-width: 650px){
+    #feature {
+        margin-top: 0;
+    }
+}

@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Hero from './components/Hero';
+import Feature from './components/Feature';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFire, faTruck, faBatteryFull } from '@fortawesome/free-solid-svg-icons'
+import Howto from './components/Howto';
+import Pricing from './components/Pricing';
+
+library.add(faFire, faTruck, faBatteryFull)
+
+
+
+class App extends Component {
+  render() {
+    const pageWrapper = { position: 'relative' }
+    return (
+      <div style={pageWrapper}>
+        <Header />
+        <Hero />
+        <Feature />
+        <Howto />
+        <Pricing />
+        <Footer />
+      </div>
+    );
+  }
+
 }
 
 export default App;
